@@ -1,1 +1,28 @@
-# atr425diamant_ffsk_crc_mapper
+# atr427diamant_ffsk_crc_mapper
+Deduction of the CRC calculation algorithm from valid data frames.
+
+# What is it for?
+This piece of code is used to find how CRC is calculated from a list of valid FFSK data frames.
+The resulting mapping can the be implemented in any code that will exchange FFSK data frames with an ATR 427 DIAMANT operating a genuine firmware.
+
+# How to use it?
+First of all, you need to ba able to capture FFSK frames. In the following example, I use a logic analyzer : 
+
+![Picture of the ATR 425 DIAMANT logic board with logic analyzer probes attached to it](https://github.com/DevSHIBBY/ffsk_scrambler_frame_decoder/blob/main/documentation/probes_on_board.jpg)
+
+The most import thing here are the probes attached to the FX419J pins 3 (TX clock) and 6 (TX data).
+
+The captured frame can then be decoded using a synchronous decoder :
+
+![Logic analyzer captured data](https://github.com/DevSHIBBY/ffsk_scrambler_frame_decoder/blob/main/documentation/logic_analyzer_capture.png)
+
+Grab all the FFSK frames you can and insert them into a simple csv file like the one given as an example here, called 'captures.csv'.
+Then run the CRC algorithm finder program with the following command : 
+```
+python infer_crc17_mapping.py captures.csv
+```
+
+The resulting code is given in the captures_crc17_mapping_result.txt file.
+
+# I want more!
+You're just one click away : [SHIBBY's Blog (FR)](https://blog.shibby.fr/2017/10/alcatel-atr42x-la-resurrection/)
