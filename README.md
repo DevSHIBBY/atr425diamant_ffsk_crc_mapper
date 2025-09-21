@@ -3,7 +3,7 @@ Deduction of the CRC calculation algorithm from valid data frames.
 
 # What is it for?
 This piece of code is used to find how CRC is calculated from a list of valid FFSK data frames.
-The resulting mapping can the be implemented in any code that will exchange FFSK data frames with an ATR 427 DIAMANT operating a genuine firmware.
+The resulting mapping can the be implemented in any code that will exchange FFSK data frames with an ATR 425 DIAMANT operating a genuine firmware.
 
 # How to use it?
 First of all, you need to ba able to capture FFSK frames. In the following example, I use a logic analyzer : 
