@@ -1,4 +1,4 @@
-# atr427diamant_ffsk_crc_mapper
+# atr425diamant_ffsk_crc_mapper
 Deduction of the CRC calculation algorithm from valid data frames.
 
 # What is it for?
